@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.Test;
 
+import hu.cubix.softdev.oc.exception.DivisionByZeroException;
 import hu.cubix.softdev.oc.service.CalculatorService;
 
 class CalculatorServiceTest {
@@ -33,10 +34,10 @@ class CalculatorServiceTest {
 
 	@Test
 	void testDivisionByZero() {
-		Exception exception = assertThrows(ArithmeticException.class, () -> {
+		Exception exception = assertThrows(DivisionByZeroException.class, () -> {
 			calculatorService.calculate(1, 0, "divide");
 		});
-		assertEquals("/ by zero", exception.getMessage());
+		assertEquals("Nullával osztás nem megengedett", exception.getMessage());
 	}
 
 	@Test
