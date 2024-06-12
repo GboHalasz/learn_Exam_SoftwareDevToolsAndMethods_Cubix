@@ -2,6 +2,8 @@ package hu.cubix.softdev.oc.service;
 
 import org.springframework.stereotype.Service;
 
+import hu.cubix.softdev.oc.exception.DivisionByZeroException;
+
 @Service
 public class CalculatorService {
 
@@ -14,6 +16,9 @@ public class CalculatorService {
 		case "multiply":
 			return num1 * num2;
 		case "divide":
+			if (num2 == 0) {
+				throw new DivisionByZeroException("Nullával osztás nem megengedett");
+			}
 			return num1 / num2;
 		default:
 			throw new IllegalArgumentException("Invalid operation");
