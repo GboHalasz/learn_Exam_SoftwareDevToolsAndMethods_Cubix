@@ -1,10 +1,10 @@
-package hu.cubix.softdev.ocalc;
+package hu.cubix.softdev.oc;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class OnlinecalculatorApplicationTests {
+class OcApplicationTests {
 
 	@Test
 	void contextLoads() {

@@ -1,13 +1,13 @@
-package hu.cubix.softdev.ocalc;
+package hu.cubix.softdev.oc;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class OnlinecalculatorApplication {
+public class OcApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(OnlinecalculatorApplication.class, args);
+		SpringApplication.run(OcApplication.class, args);
 	}
 
 }
